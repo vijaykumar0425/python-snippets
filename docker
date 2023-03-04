@@ -1,0 +1,1 @@
+sudo docker exec -t 75772eb6839a pg_dumpall -c -U postgres > dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql
