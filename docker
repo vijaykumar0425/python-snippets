@@ -1,3 +1,7 @@
 docker postgres image dump command
 
 sudo docker exec -t 75772eb6839a pg_dumpall -c -U postgres > dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql
+
+docker exec my_postgres_1 pg_restore -U postgres -d some_database /backups/postgres-backup.sql 
+
+sudo docker cp dump_.sql 1ee9ded90330:/backup
